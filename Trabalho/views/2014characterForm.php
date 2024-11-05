@@ -1,4 +1,9 @@
-<?php require_once('Trabalho/controllers/restrito.php');?>
+<?php 
+    if (!$username) {
+        header("Location: /Trabalho/index.php");
+        exit();
+      }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
