@@ -1,0 +1,84 @@
+/* styles.css */
+
+/* Estilização geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #f0f0f0; /* Texto claro */
+}
+
+/* Estilo para cabeçalhos */
+h1, h2, h3 {
+    color: #ffcc00; /* Amarelo brilhante para cabeçalhos */
+}
+
+/* Estilo de containers */
+.welcome, form {
+    background-color: #2c2c2c; /* Cor de fundo escura */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Margem inferior para separação */
+}
+
+/* Estilização de botões */
+button, input[type="submit"] {
+    background-color: #ffcc00; /* Amarelo para botões */
+    color: #1a1a1a; /* Texto escuro para contraste */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #e6b800; /* Cor de hover para botões */
+}
+
+/* Estilo de campos de entrada */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #555; /* Borda cinza escura */
+    border-radius: 4px;
+    background-color: #333; /* Fundo dos campos escuro */
+    color: #f0f0f0; /* Texto claro */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #ffcc00; /* Borda amarela quando em foco */
+    outline: none; /* Remove outline padrão */
+}
+
+/* Estilo para mensagens de erro */
+.error {
+    color: #ff3333; /* Vermelho para mensagens de erro */
+    margin-top: 10px;
+}
+
+/* Adiciona uma borda ao redor do formulário quando houver um erro */
+form.error {
+    border: 1px solid #ff3333; /* Borda vermelha para erro */
+}
+.back-button {
+    display: inline-block; /* Para que o botão apareça corretamente */
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+.back-button button {
+    background-color: #ffcc00; /* Cor amarela para o botão */
+    color: #1a1a1a; /* Texto escuro para contraste */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.back-button button:hover {
+    background-color: #e6b800; /* Cor de hover para o botão */
+}
