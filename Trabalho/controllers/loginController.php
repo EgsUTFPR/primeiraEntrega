@@ -1,32 +1,31 @@
 <?php
-
-
-$username = "admin";
-$password = "admin";
-
-
 session_start();
+require_once "../models/database.php";
 
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-if (isset($_SESSION['username'])) {
-    header("Location: /Trabalho/views/mainPage.php");
-} else {
-    
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        
-        if ($_POST['username'] == $username && $_POST['password'] == $password) {
-            $_SESSION['username'] = $username;
-            header("Location: /Trabalho/views/mainPage.php");
-            exit;
-        } else {
-            echo 'Senha ou Nome Errado';
-            echo "<script>location.href='/Trabalho/views/home.php'</script>";
-            exit;
-        }
-    } else {
-        
-        header("Location: /Trabalho/views/home.php");
-        exit; 
-    }
+if ($connection->connect_error) {
+    die("Erro de conexão: " . $connection->connect_error);
 }
+
+
+$stmt = $connection->prepare("SELECT id_users FROM users WHERE name_users = ? AND pass_users = ?");
+$stmt->bind_param("ss", $username, $password);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $_SESSION['id_users'] = $row['id_users'];
+    
+    header("Location: ../views/mainPage.php");
+    exit;
+} else {
+    header("Location: ../views/loginForm.php");
+    exit;
+}
+
+$stmt->close();
+$connection->close();
 ?>

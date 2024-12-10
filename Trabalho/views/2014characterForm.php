@@ -8,12 +8,29 @@
 </head>
 <body>
     <h1>Ficha de Personagem D&D 5e 2014</h1>
-    <form action="" method="post">
+    <form action="../controllers/characterController.php" method="post">
         <label for="name">Nome do Personagem:</label>
         <input type="text" id="name" name="name" required><br>
 
         <label for="class">Classe:</label>
-        <input type="text" id="class" name="class" required><br>
+    <select id="class" name="class" required>
+        <option value="">Selecione uma classe</option>
+        <option value="Artificer">Artificer</option>
+        <option value="Barbarian">Barbarian</option>
+        <option value="Bard">Bard</option>
+        <option value="Blood Hunter">Blood Hunter</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Monk">Monk</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+    </select><br>
+
 
         <label for="level">Nível:</label>
         <input type="number" id="level" name="level" min="1" max="20" required><br>

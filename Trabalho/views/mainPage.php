@@ -49,26 +49,16 @@
         <h2>Criar Novo Personagem</h2>
         <p>Escolha um Sistema:</p>
         <button onclick="window.location.href='/Trabalho/views/2014characterForm.php'">DnD 5e 2014</button>
-        <button onclick="workInProgress()">DnD 5e 2024</button>
         <button onclick="workInProgress()">Call of Cthullu</button>
     </div>
 
     <div id="searchCharacter" class="tab-content" style="display:none;">
-        <h2>Pesquisar Personagem</h2>
-        <form>
-            <label for="searchSystem">Sistem</label>
-            <input type="text" id="searchSystem" name="searchSystem">
-            <label for="searchName">Nome:</label>
-            <input type="text" id="searchName" name="searchName">
-            <br>
-            <label for="searchClass">Classe:</label>
-            <input type="text" id="searchClass" name="searchClass">
-            <br>
-            <label for="searchLevel">Nível:</label>
-            <input type="number" id="searchLevel" name="searchLevel">
-            <br>
-            <button onclick="workInProgress()">Buscar Personagem</button>
-        </form>
+    <h2>Pesquisar Personagem</h2>
+    <button type="button" onclick="window.location.href='buscaCharacter.php'">Buscar Personagem</button>
+</div>
+
+       
+    </div>
     </div>
 </body>
 </html>

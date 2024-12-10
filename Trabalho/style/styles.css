@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Estilização geral do corpo */
 body {
     font-family: Arial, sans-serif;
@@ -7,6 +5,11 @@ body {
     padding: 20px;
     background-color: #1a1a1a; /* Fundo escuro */
     color: #f0f0f0; /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz o corpo ocupar toda a altura da janela */
+    text-align: center; /* Centraliza o texto */
 }
 
 /* Estilo para cabeçalhos */
@@ -20,7 +23,10 @@ h1, h2, h3 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px; /* Margem inferior para separação */
+    margin-bottom: 20px;
+    width: 100%; /* O formulário ocupa 100% da largura disponível */
+    max-width: 600px; /* Limita a largura máxima do formulário */
+    margin-top: 20px;
 }
 
 /* Estilização de botões */
@@ -28,10 +34,11 @@ button, input[type="submit"] {
     background-color: #ffcc00; /* Amarelo para botões */
     color: #1a1a1a; /* Texto escuro para contraste */
     border: none;
-    padding: 10px 15px;
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s;
+    font-size: 16px; /* Aumenta o tamanho da fonte do botão */
 }
 
 button:hover, input[type="submit"]:hover {
@@ -40,13 +47,14 @@ button:hover, input[type="submit"]:hover {
 
 /* Estilo de campos de entrada */
 input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
+    width: 100%; /* Faz a caixa de entrada ocupar 100% da largura do formulário */
+    padding: 15px; /* Aumenta o preenchimento interno */
     margin: 8px 0;
     border: 1px solid #555; /* Borda cinza escura */
     border-radius: 4px;
     background-color: #333; /* Fundo dos campos escuro */
     color: #f0f0f0; /* Texto claro */
+    font-size: 16px; /* Aumenta o tamanho da fonte nos campos */
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
@@ -64,19 +72,20 @@ input[type="text"]:focus, input[type="password"]:focus {
 form.error {
     border: 1px solid #ff3333; /* Borda vermelha para erro */
 }
+
 .back-button {
-    display: inline-block; /* Para que o botão apareça corretamente */
-    margin-top: 20px; /* Espaço acima do botão */
+    margin-top: 20px;
 }
 
 .back-button button {
     background-color: #ffcc00; /* Cor amarela para o botão */
     color: #1a1a1a; /* Texto escuro para contraste */
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s;
+    font-size: 16px; /* Aumenta o tamanho da fonte */
 }
 
 .back-button button:hover {
